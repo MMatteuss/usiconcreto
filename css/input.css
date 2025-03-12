@@ -1,0 +1,21 @@
+form input[type="submit"] {
+    background-color: #25D366; /* Cor de fundo do WhatsApp */
+    color: #fff; /* Cor do texto branca */
+    padding: 0.8rem 1.5rem; /* Espaçamento interno */
+    border: none; /* Remover borda padrão */
+    border-radius: 50px; /* Borda arredondada */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para hover e clique */
+}
+
+form input[type="submit"]:hover {
+    background-color: #1eb858; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+form input[type="submit"]:active {
+    background-color: #128C7E; /* Cor de fundo ao clicar */
+    transform: translateY(0); /* Volta ao nível original ao clicar */
+}

@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+a.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+a.whatsapp-button img:hover {
+    animation: vibrate 1.5s ease-in-out infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    60% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDown 1s forwards;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav img {
+    max-width: 150px;
+}
+
+.fundo {
+    background: rgba(255, 255, 255, 0.5) url('../img/fundo.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgFundo {
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(70px);
+    animation: fadeInUp 1s forwards;
+}
+
+.imgFundo h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    /* background: rgba(255, 255, 255, 0.5); */
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.imgFundo p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    /* background: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.imgFundo .btnWhatsapp {
+    background-color: #25D366;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.imgFundo .btnWhatsapp:hover {
+    background-color: #1eb858;
+    transform: translateY(-2px);
+}
+
+.imgFundo .btnWhatsapp:active {
+    background-color: #128C7E;
+    transform: translateY(0);
+}
+
+
+.info1 {
+    background-color: #f0f0f0cd;
+    padding: 20px;
+}
+
+.conteinerInfo1 {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+}
+
+.conteinerInfo1 .texto h3 {
+    color: rgb(194, 179, 14);
+}
+
+.conteinerInfo1 .texto p {
+    color: rgb(135, 135, 135);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.conteinerInfo1 .texto {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 0.5s;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.conteinerInfo1 img {
+    flex: 1;
+    max-width: 60%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .imgFundo h1 {
+        font-size: 2rem; /* Diminuindo o tamanho da fonte */
+    }
+
+    .imgFundo p {
+        font-size: 1rem; /* Diminuindo o tamanho da fonte */
+    }
+
+    .imgFundo {
+        padding: 2rem 1rem; /* Ajustando o padding */
+    }
+
+    .conteinerInfo1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteinerInfo1 img {
+        order: -1;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .conteinerInfo1 .texto {
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .conteinerInfo1 h2 {
+        font-size: 1.5rem; /* Diminuindo o tamanho da fonte */
+    }
+
+    .conteinerInfo1 h3 {
+        font-size: 1.2rem; /* Diminuindo o tamanho da fonte */
+    }
+
+    .conteinerInfo1 p {
+        font-size: 1rem; /* Diminuindo o tamanho da fonte */
+    }
+}
+
+.conteinerInfo1 h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.conteinerInfo1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.conteinerInfo1 p {
+    font-size: 1.2rem;
+}
+
+.atrasConteiner{
+    background-color: #e0e0e0;
+}
+
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    cursor: pointer;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 40px); /* Itens lado a lado em telas grandes */
+    max-width: calc(33.333% - 40px); /* Ajustando o tamanho máximo dos itens */
+    transition: transform 0.3s ease-in-out; /* Adicionando transição para a animação */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinhando o conteúdo ao centro */
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Garantindo que todas as imagens tenham o mesmo tamanho */
+    margin-bottom: 10px;
+}
+
+.service-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center; /* Alinhando o texto ao centro */
+}
+
+.service-item button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center; /* Alinhando o botão ao centro */
+}
+
+.service-item button:hover {
+    background-color: #e65c00;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Efeito de aumento quando o mouse está sobre o item */
+}
+
+.ponta{
+    cursor: pointer;
+}
+
+.conteinerListaCasa {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinhando os itens ao topo */
+    gap: 20px;
+    flex-wrap: wrap; /* Permitir que os itens se organizem em várias linhas, se necessário */
+    padding: 20px;
+}
+
+.btnObra {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 40px); /* Itens lado a lado em telas grandes */
+    max-width: calc(33.333% - 40px); /* Ajustando o tamanho máximo dos itens */
+    transition: transform 0.3s ease-in-out; /* Adicionando transição para a animação */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinhando o conteúdo ao centro */
+}
+
+.imgIcon {
+    width: 80px; /* Definindo um tamanho fixo para os ícones */
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.btnObra p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btnObra:hover {
+    transform: scale(1.05); /* Efeito de aumento quando o mouse está sobre o item */
+}
+
+.linkZap{
+    text-decoration: none
+}
+
+.ponta p{
+    color: black;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .btnObra {
+        flex: 1 1 100%; /* Itens empilhados em telas pequenas */
+        max-width: 100%;
+    }
+}
+
+
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 100%; /* Itens empilhados em telas pequenas */
+        max-width: 100%;
+    }
+
+    .service-item img {
+        max-height: none; /* Garantindo que as imagens não sejam cortadas */
+    }
+}
+
+
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 100%; /* Itens empilhados em telas pequenas */
+        max-width: 100%;
+    }
+
+    .service-item img {
+        max-height: 150px; /* Ajustando o tamanho das imagens em telas pequenas */
+    }
+}
+
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+    }
+
+    .service-item {
+        margin-bottom: 10px;
+    }
+
+    .button-container button,
+    .service-item button {
+        width: 100%; /* Ajuste o botão para ocupar toda a largura */
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer .texto {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    .imgFundo h1 {
+        font-size: 3rem;
+    }
+
+    .imgFundo p {
+        font-size: 1.5rem;
+    }
+
+    .conteinerInfo1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .conteinerInfo1 img {
+        margin-right: 2rem;
+        flex: 1;
+    }
+
+    .conteinerInfo1 h2 {
+        font-size: 2rem;
+    }
+
+    .conteinerInfo1 h3 {
+        font-size: 1.5rem;
+    }
+
+    .conteinerInfo1 p {
+        font-size: 1.2rem;
+    }
+}
