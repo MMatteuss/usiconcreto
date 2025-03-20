@@ -449,3 +449,15 @@ footer .texto {
         font-size: 1.2rem;
     }
 }
+
+/* Estilo para a imagem do caminhão */
+.imgCaminao {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
